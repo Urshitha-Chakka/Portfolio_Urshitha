@@ -61,6 +61,7 @@ header {
   background-image: radial-gradient( circle farthest-corner at -5.6% -6.8%,  rgba(73, 33, 103) 37.3%, rgba(38, 1, 97) 73.5% );
   z-index: 1000;
   font-family: 'lugrasimo', cursive;
+  flex-wrap: wrap;
 }
 
 .toggle-btn {
@@ -105,7 +106,8 @@ h2 {
   line-height: 1.5;
 }
 #about p {
-  max-width: 2002px;
+  width: 80%;
+  max-width: 800px;
   margin: auto;
   padding: 1.5rem;
   background: linear-gradient(to bottom right, #d9c3ea, #a4bce2);
@@ -416,6 +418,7 @@ footer {
   }
 
   #about p {
+    width: 90%;
     padding: 1rem;
     font-size: 16px;
   }
@@ -424,5 +427,81 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     overflow-x: hidden;
+  }
+}
+@media (max-width: 480px) {
+  .topbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .toggle-btn {
+    font-size: 14px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  header {
+    height: auto !important;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 32px !important;
+    line-height: 1.2;
+    word-break: break-word;
+    white-space: normal;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+  .dark-mode header {
+    height: auto !important;
+    padding: 2rem 1rem !important;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dark-mode .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .dark-mode .hero h1 {
+    font-size: 32px !important;
+    line-height: 1.2;
+    word-break: break-word;
+    white-space: normal;
+    color: white;
+  }
+
+  .dark-mode .hero p {
+    font-size: 14px;
+    color: white;
   }
 }

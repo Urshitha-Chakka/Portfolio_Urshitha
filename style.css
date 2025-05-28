@@ -61,7 +61,6 @@ header {
   background-image: radial-gradient( circle farthest-corner at -5.6% -6.8%,  rgba(73, 33, 103) 37.3%, rgba(38, 1, 97) 73.5% );
   z-index: 1000;
   font-family: 'lugrasimo', cursive;
-  flex-wrap: wrap;
 }
 
 .toggle-btn {
@@ -106,8 +105,7 @@ h2 {
   line-height: 1.5;
 }
 #about p {
-  width: 80%;
-  max-width: 800px;
+  max-width: 2002px;
   margin: auto;
   padding: 1.5rem;
   background: linear-gradient(to bottom right, #d9c3ea, #a4bce2);
@@ -115,6 +113,7 @@ h2 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: transform 0.3s ease;
+  text-align: justify;
 }
 #about p:hover {
   background-color: #d6c5ff; /* Soft lavender hover effect */
@@ -215,6 +214,7 @@ h2 {
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   flex: 1 1 calc(33% - 2rem);
+  text-align: justify;
 }
 h5 {
   font-family: 'Georgia', serif;
@@ -275,8 +275,6 @@ footer {
 /* Header */
 .dark-mode header {
   background-image: radial-gradient(circle farthest-corner at -5.6% -6.8%, #12121c 30%, #1f2a44 75%);
-  z-index: 1000;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
   color: white;
   height: 50vh;
   display: flex;
@@ -287,14 +285,24 @@ footer {
   position: relative;
   font-weight: 400;
   font-style: normal;
+  text-shadow: 3px 3px 3px #3c3c3c;
 }
 
 /* Topbar */
 .dark-mode .topbar {
   background-image: radial-gradient(circle farthest-corner at -5.6% -6.8%, #12121c 30%, #1f2a44 75%);
-  z-index: 1100; /* Ensure it floats above header */
   position: fixed;
-  color: black;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  z-index: 1000;
+  font-family: 'lugrasimo', cursive;
+  color: white;
 }
 .dark-mode #skills h3 {
   color: #e0e0e0;
@@ -305,6 +313,7 @@ footer {
   background: linear-gradient(to bottom right, #2a2a40, #3c3b5a);
   color: #e0e0e0;
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  text-align: justify;
 }
 
 
@@ -336,6 +345,7 @@ footer {
   background: linear-gradient(to bottom right, #2f2f3f, #3e3a5a);
   color: #d0d0ff;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  text-align: justify
 }
 
 /* Contact Cards */
@@ -426,7 +436,6 @@ footer {
   }
 
   #about p {
-    width: 90%;
     padding: 1rem;
     font-size: 16px;
   }
@@ -436,80 +445,20 @@ footer {
     justify-content: center;
     overflow-x: hidden;
   }
-}
-@media (max-width: 480px) {
-  .topbar {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
-  }
-
-  nav a {
-    font-size: 14px;
-  }
-
-  .toggle-btn {
-    font-size: 14px;
-    padding: 0.4rem 0.8rem;
-  }
-
-  header {
-    height: auto !important;
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-  }
-
-  .hero h1 {
-    font-size: 32px !important;
-    line-height: 1.2;
-    word-break: break-word;
-    white-space: normal;
-  }
-
-  .hero p {
-    font-size: 14px;
-  }
   .dark-mode header {
-    height: auto !important;
-    padding: 2rem 1rem !important;
+    padding: 3rem 1rem;
+    height: auto;
     flex-direction: column;
     text-align: center;
-  }
-
-  .dark-mode .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
   }
 
   .dark-mode .hero h1 {
-    font-size: 32px !important;
-    line-height: 1.2;
-    word-break: break-word;
-    white-space: normal;
-    color: white;
+    font-size: 48px !important;
   }
 
   .dark-mode .hero p {
-    font-size: 14px;
-    color: white;
+    font-size: 16px;
+    padding: 0 10px;
   }
 }
+

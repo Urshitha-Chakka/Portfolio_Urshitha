@@ -276,9 +276,17 @@ footer {
 .dark-mode header {
   background-image: radial-gradient(circle farthest-corner at -5.6% -6.8%, #12121c 30%, #1f2a44 75%);
   z-index: 1000;
-  padding: 0 4rem;
-  color: #ffffff;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  color: white;
+  height: 50vh;
+  display: flex;
+  padding: 0 4rem;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Topbar */
